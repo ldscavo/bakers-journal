@@ -1,0 +1,14 @@
+* {
+  color: #000;
+}
+
+div#content {
+  border:1px solid #000;
+  max-width:1200px;
+  margin:0 auto;
+  padding:5px 15px;
+}
+
+form > div {
+  padding:5px 15px;
+}
