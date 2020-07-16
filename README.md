@@ -1,6 +1,6 @@
-# baking-diary
+# Baker's Journal
 
-FIXME
+This is a basic web application to calculate bread recipes using baker's percentages and to keep track of previous bakes.
 
 ## Prerequisites
 
@@ -13,7 +13,3 @@ You will need [Leiningen][] 2.0.0 or above installed.
 To start a web server for the application, run:
 
     lein ring server
-
-## License
-
-Copyright © 2020 FIXME
