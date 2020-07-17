@@ -1,6 +1,6 @@
-(ns baking-diary.recipe-test
+(ns bakers-journal.recipe-test
   (:require [clojure.test :refer [deftest testing is]]
-            [baking-diary.recipe :as recipe]))
+            [bakers-journal.recipe :as recipe]))
 
 (deftest test-recipe
   (let [dough {:flour 500}]

@@ -1,7 +1,7 @@
-(ns baking-diary.handler-test
+(ns bakers-journal.handler-test
   (:require [clojure.test :refer [deftest testing is]]
             [ring.mock.request :as mock]
-            [baking-diary.handler :as bd]))
+            [bakers-journal.handler :as bd]))
 
 (deftest test-app
   (testing "main route"

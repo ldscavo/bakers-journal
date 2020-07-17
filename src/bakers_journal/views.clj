@@ -1,4 +1,4 @@
-(ns baking-diary.views
+(ns bakers-journal.views
   (:require [hiccup.core :refer [html]]
             [hiccup.page :refer [html5]]
             [clojure.string :as str]

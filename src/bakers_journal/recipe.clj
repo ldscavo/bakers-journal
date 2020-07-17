@@ -1,4 +1,4 @@
-(ns baking-diary.recipe)
+(ns bakers-journal.recipe)
 
 (defn water [hydration ratio]
   (let [flour (ratio :flour)

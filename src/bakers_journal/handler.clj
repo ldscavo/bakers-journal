@@ -1,10 +1,10 @@
-(ns baking-diary.handler
+(ns bakers-journal.handler
   (:require [compojure.core :refer [defroutes GET POST]]
             [compojure.route :as route]
             [compojure.coercions :refer [as-int]]
             [ring.middleware.defaults :refer [wrap-defaults site-defaults]]
-            [baking-diary.recipe :as recipe]
-            [baking-diary.views :as views]))
+            [bakers-journal.recipe :as recipe]
+            [bakers-journal.views :as views]))
 
 (defroutes app-routes
   (GET "/" []
