@@ -18,9 +18,10 @@
       (let [dough-with-salt (recipe/salt dough)]
         (is (= (:salt dough-with-salt) 10)))))
   
-  (testing "Create recipe function results in all four ingredients"
+  (testing "Create recipe results in all four ingredients and hydration"
     (let [recipe (recipe/create-recipe 500 75)]
       (is (contains? recipe :flour))
+      (is (contains? recipe :hydration))
       (is (contains? recipe :water))
       (is (contains? recipe :levain))
       (is (contains? recipe :salt)))))
