@@ -1,19 +1,30 @@
 (ns bakers-journal.recipe)
 
+(defn ->decimal [percent]
+  (/ percent 100))
+
+(defn percentage [base percentage]
+  (let [percent (->decimal percentage)]
+    (int (* base percent))))
+
 (defn water [hydration ratio]
   (let [flour (ratio :flour)
-        percent (/ hydration 100)]
+        water (percentage flour hydration)]
     (assoc ratio
            :hydration hydration
-           :water (int (* flour percent)))))
+           :water water)))
 
 (defn levain [ratio]
-  (let [flour (ratio :flour)]
-    (assoc ratio :levain (int (* flour 0.2)))))
+  (let [flour (ratio :flour)
+        levain (percentage flour 20)]
+    (assoc ratio
+           :levain levain)))
 
 (defn salt [ratio]
-  (let [flour (ratio :flour)]
-    (assoc ratio :salt (int (* flour 0.02)))))
+  (let [flour (ratio :flour)
+        salt (percentage flour 2)]
+    (assoc ratio
+           :salt salt)))
 
 (defn create-recipe [flour hydration]
   (->> {:flour flour}
