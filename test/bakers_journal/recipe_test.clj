@@ -24,4 +24,14 @@
       (is (contains? recipe :hydration))
       (is (contains? recipe :water))
       (is (contains? recipe :levain))
-      (is (contains? recipe :salt)))))
+      (is (contains? recipe :salt))))
+  
+  (testing "Hydration calculates the ratio of flour to water in the recipe"
+    (let [dough {:flour 500 :water 300}]
+      (is (= (recipe/hydration dough) 60))))
+  
+  (testing "Flour is calculated correctly from total weight and hydration"
+    (let [total 1000]
+      (is (= (recipe/get-flour-from-totals total 1.00) 500))
+      (is (= (recipe/get-flour-from-totals total 0.75) 571))
+      (is (= (recipe/get-flour-from-totals total 0.45) 689)))))

@@ -37,3 +37,8 @@
         water (:water ratio)]
     (->> (/ water flour)
          (* 100))))
+
+(defn get-flour-from-totals [total hydration]
+  (->> (+ 1 hydration)
+       (/ total)
+       (int)))
